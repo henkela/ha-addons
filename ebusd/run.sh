@@ -59,7 +59,7 @@ elif bashio::config.has_value "device" && bashio::config.has_value "network_devi
     bashio::log.warning "Ignoring USB device..."
     ebusd_args+=("--device=$(bashio::config network_device)") 
 elif bashio::config.has_value "device" && bashio::config.has_value "mode"; then
-    ebusd_args+=("--device=$(bashio::config mode):$(bashio::config device)")
+    ebusd_args+=("--device=$(bashio::config device)")
 elif bashio::config.has_value "device"; then
     ebusd_args+=("--device=$(bashio::config device)")
 elif bashio::config.has_value "network_device" && bashio::config.has_value "mode"; then
